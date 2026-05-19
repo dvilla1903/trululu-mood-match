@@ -81,28 +81,47 @@ export default function UploadStep({ onAnalyze }: UploadStepProps) {
       className="flex flex-col items-center justify-center min-h-dvh px-6 py-12 relative"
     >
       {/* Background image */}
-      <div
-        className="fixed inset-0 -z-10 opacity-20"
-        style={{
-          backgroundImage: 'url(/bg-upload.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      />
+      <div className="fixed inset-0 -z-10">
+        <div
+          className="absolute inset-0 opacity-15"
+          style={{
+            backgroundImage: 'url(/bg-upload.png)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[var(--background)]/60 to-[var(--background)]" />
+      </div>
 
       <div className="w-full max-w-md mx-auto flex flex-col items-center gap-8">
-        {/* Logo */}
-        <motion.img
-          src="/logo-ring.png"
-          alt="Trululu Aros"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, ease: EASE }}
-          className="w-28 h-28 md:w-36 md:h-36 object-contain drop-shadow-[0_0_30px_rgba(168,85,247,0.4)]"
-        />
+        {/* Header with floating gummies */}
+        <div className="text-center space-y-3 relative">
+          {/* Decorative floating gummies */}
+          <motion.img
+            src="/sandia.png"
+            alt=""
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 0.7, x: 0 }}
+            transition={{ delay: 0.2, duration: 0.8, ease: EASE }}
+            className="absolute -left-16 -top-8 w-14 h-14 object-contain blur-[1px] rotate-[-15deg] hidden md:block"
+          />
+          <motion.img
+            src="/naranja.png"
+            alt=""
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 0.7, x: 0 }}
+            transition={{ delay: 0.4, duration: 0.8, ease: EASE }}
+            className="absolute -right-16 -top-4 w-12 h-12 object-contain blur-[1px] rotate-[20deg] hidden md:block"
+          />
+          <motion.img
+            src="/uva.png"
+            alt=""
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 0.5, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.8, ease: EASE }}
+            className="absolute -right-12 bottom-0 w-10 h-10 object-contain blur-[1px] rotate-[10deg] hidden md:block"
+          />
 
-        {/* Header */}
-        <div className="text-center space-y-3">
           <motion.h1
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
