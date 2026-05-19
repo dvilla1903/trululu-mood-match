@@ -78,9 +78,29 @@ export default function UploadStep({ onAnalyze }: UploadStepProps) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.4, ease: EASE }}
-      className="flex flex-col items-center justify-center min-h-dvh px-6 py-12"
+      className="flex flex-col items-center justify-center min-h-dvh px-6 py-12 relative"
     >
+      {/* Background image */}
+      <div
+        className="fixed inset-0 -z-10 opacity-20"
+        style={{
+          backgroundImage: 'url(/bg-upload.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      />
+
       <div className="w-full max-w-md mx-auto flex flex-col items-center gap-8">
+        {/* Logo */}
+        <motion.img
+          src="/logo-ring.png"
+          alt="Trululu Aros"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, ease: EASE }}
+          className="w-28 h-28 md:w-36 md:h-36 object-contain drop-shadow-[0_0_30px_rgba(168,85,247,0.4)]"
+        />
+
         {/* Header */}
         <div className="text-center space-y-3">
           <motion.h1

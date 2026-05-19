@@ -66,14 +66,21 @@ export default function ClosingStep({ flavorId, onRestart }: ClosingStepProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 0.8, ease: EASE }}
-          className="flex flex-col items-center gap-1"
+          className="flex flex-col items-center gap-4"
         >
-          <p className="text-2xl font-semibold tracking-tight text-white/60">
-            Trululu
-          </p>
-          <p className="text-sm tracking-[0.3em] uppercase text-white/30">
-            Aros
-          </p>
+          <img
+            src="/hero-gummies.png"
+            alt="Trululu Aros"
+            className="w-64 md:w-80 object-contain drop-shadow-[0_0_30px_rgba(168,85,247,0.3)]"
+          />
+          <div className="flex flex-col items-center gap-1">
+            <p className="text-2xl font-semibold tracking-tight text-white/60">
+              Trululu
+            </p>
+            <p className="text-sm tracking-[0.3em] uppercase text-white/30">
+              Aros
+            </p>
+          </div>
         </motion.div>
 
         {/* Restart button */}

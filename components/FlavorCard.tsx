@@ -29,8 +29,10 @@ export default function FlavorCard({ flavor, result }: FlavorCardProps) {
         {result.detectedMood}
       </motion.div>
 
-      {/* Emoji */}
-      <motion.div
+      {/* Flavor image */}
+      <motion.img
+        src={flavor.image}
+        alt={flavor.name}
         initial={{ scale: 0, rotate: -20 }}
         animate={{ scale: 1, rotate: 0 }}
         transition={{
@@ -40,12 +42,8 @@ export default function FlavorCard({ flavor, result }: FlavorCardProps) {
           stiffness: 200,
           damping: 12,
         }}
-        className="text-8xl leading-none"
-        role="img"
-        aria-label={flavor.name}
-      >
-        {flavor.emoji}
-      </motion.div>
+        className="w-32 h-32 md:w-40 md:h-40 object-contain drop-shadow-[0_0_25px_rgba(255,255,255,0.2)]"
+      />
 
       {/* Name */}
       <motion.h2

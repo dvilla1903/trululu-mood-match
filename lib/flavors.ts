@@ -4,6 +4,7 @@ export interface Flavor {
   id: FlavorId;
   name: string;
   emoji: string;
+  image: string;
   gradient: string;
   accentColor: string;
   textColor: string;
@@ -16,6 +17,7 @@ export const FLAVORS: Record<FlavorId, Flavor> = {
     id: 'sandia',
     name: 'Sandía',
     emoji: '🍉',
+    image: '/sandia.png',
     gradient: 'from-pink-400 via-red-400 to-green-400',
     accentColor: '#FF4D6D',
     textColor: '#FFFFFF',
@@ -26,6 +28,7 @@ export const FLAVORS: Record<FlavorId, Flavor> = {
     id: 'fresa',
     name: 'Fresa',
     emoji: '🍓',
+    image: '/fresa.png',
     gradient: 'from-rose-300 via-pink-500 to-red-500',
     accentColor: '#E63946',
     textColor: '#FFFFFF',
@@ -36,6 +39,7 @@ export const FLAVORS: Record<FlavorId, Flavor> = {
     id: 'uva',
     name: 'Uva',
     emoji: '🍇',
+    image: '/uva.png',
     gradient: 'from-purple-400 via-violet-500 to-indigo-600',
     accentColor: '#7B2CBF',
     textColor: '#FFFFFF',
@@ -46,6 +50,7 @@ export const FLAVORS: Record<FlavorId, Flavor> = {
     id: 'manzana-verde',
     name: 'Manzana Verde',
     emoji: '🍏',
+    image: '/manzana-verde.png',
     gradient: 'from-lime-300 via-green-400 to-emerald-500',
     accentColor: '#52B788',
     textColor: '#0A2E1F',
@@ -56,6 +61,7 @@ export const FLAVORS: Record<FlavorId, Flavor> = {
     id: 'naranja',
     name: 'Naranja',
     emoji: '🍊',
+    image: '/naranja.png',
     gradient: 'from-yellow-300 via-orange-400 to-red-400',
     accentColor: '#FF8500',
     textColor: '#FFFFFF',
